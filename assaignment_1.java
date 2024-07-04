@@ -30,12 +30,11 @@ class SavingsAccount extends BankAccount {
     private static final double WITHDRAWAL_LIMIT = 1000.0;
     private static final double WITHDRAWAL_FEE = 2.0;
 
-    // Constructor
     public SavingsAccount(double balance) {
         super(balance);
     }
 
-    // Overridden withdraw method
+    // override withdraw method
     @Override
     public void withdraw(double amount) {
         if (amount > WITHDRAWAL_LIMIT) {
@@ -58,7 +57,7 @@ class CheckingAccount extends BankAccount {
         super(balance);
     }
 
-    // Overridden withdraw method
+    //override withdraw method
     @Override
     public void withdraw(double amount) {
         if (amount + WITHDRAWAL_FEE > balance) {
